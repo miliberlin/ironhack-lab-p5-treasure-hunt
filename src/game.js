@@ -15,19 +15,19 @@ class Player {
     this.row = constrain(this.row, 0, (WIDTH - SQUARE_SIDE));
 
     image(this.image, this.col, this.row, this.width, this.height);
-    // when keys are pressed constantly. Bug: Player is moving too fast!
-    // if (keyIsDown(38)) {
-    //     this.moveUp()
-    // }
-    // if (keyIsDown(40)) {
-    //     this.moveDown()
-    // }
-    // if (keyIsDown(37)) {
-    //     this.moveLeft()
-    // }
-    // if (keyIsDown(39)) {
-    //     this.moveRight()
-    // }
+
+    if (keyIsDown(38)) {
+        this.moveUp()
+    }
+    if (keyIsDown(40)) {
+        this.moveDown()
+    }
+    if (keyIsDown(37)) {
+        this.moveLeft()
+    }
+    if (keyIsDown(39)) {
+        this.moveRight()
+    }
   }
   moveUp() {
     this.row -= SQUARE_SIDE;
@@ -59,6 +59,7 @@ class Treasure {
     image(this.image, this.col, this.row, this.width, this.height);
   }
 }
+
 class Game {
   constructor() {
     this.player = new Player();
