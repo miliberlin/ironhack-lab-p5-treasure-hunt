@@ -85,7 +85,7 @@ class Game {
       score++;
       scoreDisplay.innerText = score;
       this.treasure.row = 100 * Math.ceil((Math.random()*(WIDTH-SQUARE_SIDE)) / 100);
-      this.treasure.col = 100 * Math.ceil((Math.random()*HEIGHT-SQUARE_SIDE) / 100);
+      this.treasure.col = 100 * Math.ceil((Math.random()*(HEIGHT-SQUARE_SIDE)) / 100);
     }
   }
 }
